@@ -4,28 +4,32 @@
 //
 
 export class BankAccount {
-  constructor() {
-    throw new Error("Remove this statement and implement this function");
+  constructor(monto) {
+    this.activo = false;
+    this.monto = monto;
   }
 
   open() {
-    throw new Error("Remove this statement and implement this function");
+    if (this.activo) throw new ValueError();
+    this.activo = true;
+    this.monto = 0;
   }
 
   close() {
-    throw new Error("Remove this statement and implement this function");
+    //throw new Error("Remove this statement and implement this function");
   }
 
   deposit() {
-    throw new Error("Remove this statement and implement this function");
+    //throw new Error("Remove this statement and implement this function");
   }
 
   withdraw() {
-    throw new Error("Remove this statement and implement this function");
+    //throw new Error("Remove this statement and implement this function");
   }
 
   get balance() {
-    throw new Error("Remove this statement and implement this function");
+    //throw new Error("Remove this statement and implement this function");
+    return this.monto;
   }
 }
 
