@@ -37,7 +37,7 @@ export class BankAccount {
   }
 
   withdraw(monto) {
-    if (!this.activo || monto>this.monto) {
+    if (!this.activo || monto>this.monto || monto<0) {
       throw new ValueError();
     }
 
