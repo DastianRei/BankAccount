@@ -34,9 +34,11 @@ export class BankAccount {
   }
 
   withdraw(monto) {
-    if (this.activo || monto < this.dinero || monto > 0) {
-      this.monto -= monto;
+    if (!this.activo || monto > this.monto || monto < 0) {
+      throw new ValueError();
     }
+
+    this.monto -= monto;
   }
 
   get balance() {
