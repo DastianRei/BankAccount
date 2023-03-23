@@ -19,8 +19,10 @@ export class BankAccount {
     //throw new Error("Remove this statement and implement this function");
   }
 
-  deposit() {
+  deposit(monto) {
     //throw new Error("Remove this statement and implement this function");
+ 
+    
   }
 
   withdraw() {
