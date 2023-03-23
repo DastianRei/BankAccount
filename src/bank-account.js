@@ -11,8 +11,8 @@ export class BankAccount {
 
   open() {
     if (this.activo) {
-      throw new ValueError()
-    };
+      throw new ValueError();
+    }
     this.activo = true;
     this.monto = 0;
   }
@@ -23,14 +23,15 @@ export class BankAccount {
 
   deposit(monto) {
     //throw new Error("Remove this statement and implement this function");
-    if(this.activo){
-      this.monto+=monto;
+    if (this.activo) {
+      this.monto += monto;
     }
-    
   }
 
-  withdraw() {
-    //throw new Error("Remove this statement and implement this function");
+  withdraw(monto) {
+    if (this.activo || monto < this.dinero || monto > 0) {
+      this.monto -= monto;
+    }
   }
 
   get balance() {
