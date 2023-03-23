@@ -19,6 +19,9 @@ export class BankAccount {
 
   close() {
     //throw new Error("Remove this statement and implement this function");
+    if (this.activo) {
+      this.activo = false;
+    }
   }
 
   deposit(monto) {
@@ -36,6 +39,9 @@ export class BankAccount {
 
   get balance() {
     //throw new Error("Remove this statement and implement this function");
+    if(!this.activo){
+      throw new ValueError();
+    }
     return this.monto;
   }
 }
