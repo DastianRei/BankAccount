@@ -28,6 +28,8 @@ export class BankAccount {
     //throw new Error("Remove this statement and implement this function");
     if (this.activo) {
       this.monto += monto;
+    } else {
+      throw new ValueError();
     }
   }
 
@@ -39,7 +41,7 @@ export class BankAccount {
 
   get balance() {
     //throw new Error("Remove this statement and implement this function");
-    if(!this.activo){
+    if (!this.activo) {
       throw new ValueError();
     }
     return this.monto;
