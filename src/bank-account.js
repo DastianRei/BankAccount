@@ -29,7 +29,7 @@ export class BankAccount {
 
   deposit(monto) {
     //throw new Error("Remove this statement and implement this function");
-    if (this.activo) {
+    if (this.activo && monto>0) {
       this.monto += monto;
     } else {
       throw new ValueError();
